@@ -1,4 +1,4 @@
-from pylab import arange, newaxis
+from numpy import arange, newaxis
 from scipy.interpolate import interp1d
 from numpy import fft, roll, floor, abs, isinf
 import numpy as np
@@ -22,7 +22,7 @@ def read_point_data_file(filename):
             h_fgp = np.loadtxt(filename, comments='#', delimiter=',', skiprows=0, ndmin=2)
         return h_fgp
     else:
-        print "Filename", filename, "does not exist"
+        print ("Filename", filename, "does not exist")
         raise ValueError
 
 
